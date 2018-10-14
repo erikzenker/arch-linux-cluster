@@ -13,6 +13,7 @@ Using arch linux distro to build a full cluster system.
   - base-devel
   - emacs-nox
   - git
+  - pacaur
 
 
 * Basic setup
@@ -84,8 +85,18 @@ Using arch linux distro to build a full cluster system.
   - Print package info: `spack info PACKAGE_NAME`
   - Switch prefix: `spack bootstrap NEW_PREFIX`
   
+* Usage with environmental modules
+  - Install the env-modules package: `pacaur -S env-modules`
+  - Source init script for the particular shell: `source /etc/modules/init/bash`
+  - Setup spack env for bash: `./share/spack/setup-env.sh`
+  - List avail modules: `module avail`
+  - Load module: `module load MODULE_NAME`
+  - Unload module: `module unload MODULE_NAME`
+  - List loaded modules: `module list`
+  
 * Known issues:
   - gcc 7.3.0/6.4.0 etc. might not be compilable by clang, or gcc 8.2.0
+  
   
 ## Maintainance
 
