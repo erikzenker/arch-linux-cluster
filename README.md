@@ -106,7 +106,8 @@ Using arch linux distro to build a full cluster system.
 ## Automatation of Node Installation
 
 ### Using Ansible
-* Install ansible: `# pacman -S ansible`
+* Install ansible on control host: `# pacman -S ansible`
+* Add public key of control host to ansible slaves in `authorized_keys`
 
 ## Useful Links
 
