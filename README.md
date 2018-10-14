@@ -111,3 +111,4 @@ Using arch linux distro to build a full cluster system.
 * [Slurm](https://wiki.archlinux.org/index.php/Slurm)
 * [Nix Package Manager Howto](https://nixos.org/nixos/manual/index.html#sec-ad-hoc-packages)
 * [Environmental Modules](http://www.admin-magazine.com/HPC/Articles/Environment-Modules)
+*  [Lmod: Environmental Modules Alternative](http://www.admin-magazine.com/HPC/Articles/Lmod-Alternative-Environment-Modules)
