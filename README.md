@@ -108,7 +108,16 @@ Using arch linux distro to build a full cluster system.
 ### Using Ansible
 * Install ansible on control host: `# pacman -S ansible`
 * Add public key of control host to ansible slaves in `authorized_keys`
-* Run command as root: `ansible all --become --become-method=sudo --ask-become-pass -m shell -a 'COMMAND'`
+* Add login and compute nodes to ansible hosts in `/etc/ansible/hosts`
+  ```
+  [login]
+  IP:PORT
+  
+  [compute]
+  IP:PORT
+  ```
+* Run playbook: `ansible-playbook -b --become-method=sudo --ask-become-pass PLAYBOOK.yml`
+  * [Login node playbook yml](login_base_system.yml)
 
 ## Useful Links
 
@@ -116,4 +125,5 @@ Using arch linux distro to build a full cluster system.
 * [Slurm](https://wiki.archlinux.org/index.php/Slurm)
 * [Nix Package Manager Howto](https://nixos.org/nixos/manual/index.html#sec-ad-hoc-packages)
 * [Environmental Modules](http://www.admin-magazine.com/HPC/Articles/Environment-Modules)
-*  [Lmod: Environmental Modules Alternative](http://www.admin-magazine.com/HPC/Articles/Lmod-Alternative-Environment-Modules)
+* [Lmod: Environmental Modules Alternative](http://www.admin-magazine.com/HPC/Articles/Lmod-Alternative-Environment-Modules)
+* [Ansible Documetation](https://docs.ansible.com/ansible/latest/index.html)

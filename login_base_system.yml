@@ -1,0 +1,14 @@
+- hosts: login
+  tasks:
+    - name: Install base packages
+      pacman:
+        name: base,base-devel,emacs-nox,git,pacaur
+        state: present
+
+    - name: Update base system
+      pacman:
+        update_cache: yes
+        upgrade: yes
+
+    - hostname:
+        name: login01
