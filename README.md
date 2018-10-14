@@ -69,21 +69,24 @@ Using arch linux distro to build a full cluster system.
   - Cmake: the c compiler is not able to compile a simple test program
     - clang works / gcc currently not
 ### Using Spack
-* Install spack `git clone https://github.com/llnl/spack.git`
+* Install spack: `git clone https://github.com/llnl/spack.git`
+* Use bash: `bash`
 
 * Usage spack
   - Install packages: `spack install PACKAGE_NAME@VERSION_NUMBER`
+  - Use a particular compiler: `spack install PACKAGE_NAME@VERSION_NUMBER %COMPILER_NAME@COMPILER_VERSION`
     - to install with root `export FORCE_UNSAFE_CONFIGURE=1`
+  - Show compilers: `spack compilers`  
   - Uninstall packages: `spack uninstall PACKAGE_NAME`
   - List installed packages: `spack find`
   - Search packages: `spack list PACKAGE_NAME`
   - List package versions: `spack versions PACKAGE_NAME`
   - Print package info: `spack info PACKAGE_NAME`
   - Switch prefix: `spack bootstrap NEW_PREFIX`
-
-* Known issues
-  - It is currently not possible to compile gcc: `https://github.com/LLNL/spack/issues/3719`
-
+  
+* Known issues:
+  - gcc 7.3.0/6.4.0 etc. might not be compilable by clang, or gcc 8.2.0
+  
 ## Maintainance
 
 * Refresh keys: `# pacman-key --refresh-keys`
