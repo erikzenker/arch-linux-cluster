@@ -105,6 +105,9 @@ Using arch linux distro to build a full cluster system.
 
 ## Automatation of Node Installation
 
+### Using Ansible
+* Install ansible: `# pacman -S ansible`
+
 ## Useful Links
 
 * [Gentoo HPC Guide](https://wiki.gentoo.org/wiki/High_Performance_Computing_on_Gentoo)
