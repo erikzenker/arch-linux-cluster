@@ -108,6 +108,7 @@ Using arch linux distro to build a full cluster system.
 ### Using Ansible
 * Install ansible on control host: `# pacman -S ansible`
 * Add public key of control host to ansible slaves in `authorized_keys`
+* Run command as root: `ansible all --become --become-method=sudo --ask-become-pass -m shell -a 'COMMAND'`
 
 ## Useful Links
 
