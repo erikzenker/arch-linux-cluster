@@ -97,6 +97,16 @@ Using arch linux distro to build a full cluster system.
 * Known issues:
   - gcc 7.3.0/6.4.0 etc. might not be compilable by clang, or gcc 8.2.0
   
+### Using Conda
+
+### Using Linuxbrew
+* Install linuxbrew: `pacaur -S linuxbrew`
+* Set directory permissions
+
+* Usage linuxbrew
+  - Install packages: `brew install PACKAGE_NAME@VERSION_NUMBER`
+  - Search packages: `brew search PACKAGE_NAME`
+  
   
 ## Maintainance
 
@@ -118,6 +128,8 @@ Using arch linux distro to build a full cluster system.
   ```
 * Run playbook: `ansible-playbook -b --become-method=sudo --ask-become-pass PLAYBOOK.yml`
   * [Login node playbook yml](login_base_system.yml)
+
+### Using Docker
 
 ## Useful Links
 
